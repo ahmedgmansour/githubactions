@@ -8,9 +8,14 @@ jobs:
         steps: 
             - name: welcome message
               run: echo "my first github actions"
+
+            - name: checkout repositry
+              uses: actions/checkout@v4
+              
             - name: list files
               run: ls -la
+              
             - name: excute shell script 
               run: |
                 chmod +x bash.sh
-                ./bash.sh         
+                ../bash.sh         
