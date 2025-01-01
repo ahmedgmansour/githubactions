@@ -14,8 +14,8 @@ jobs:
               
             - name: list files
               run: ls -la
-              
+
             - name: excute shell script 
               run: |
                 chmod +x bash.sh
-                ../bash.sh         
+                ./bash.sh         
