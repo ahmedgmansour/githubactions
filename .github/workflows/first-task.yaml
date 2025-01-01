@@ -10,3 +10,7 @@ jobs:
               run: echo "my first github actions"
             - name: list files
               run: ls -la
+            - name: excute shell script 
+              run: |
+                chmod +x bash.sh
+                ./bash.sh         
