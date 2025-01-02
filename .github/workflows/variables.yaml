@@ -6,7 +6,7 @@ on:
 env:
     CONTAINER_REGISTRY: docker.io
     DOCKER_USERNAME: ahmedgmansour
-    IMAGE_NAME: github-actions-nginx    
+    IMAGE_NAME: boardgame   
 
 jobs:
   docker:
@@ -23,9 +23,9 @@ jobs:
     - name: Docker Publish
       run: echo docker push ${{ env.CONTAINER_REGISTRY }}/$DOCKER_USERNAME/$IMAGE_NAME:latest
 
-  deploy:
-    needs: docker
-    runs-on: ubuntu-latest
-    steps:
-    - name: Docker Run
-      run: docker run -d -p 8080:80 ${{ env.CONTAINER_REGISTRY }}/$DOCKER_USERNAME/$IMAGE_NAME:latest
+  # deploy:
+  #   needs: docker
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - name: Docker Run
+  #     run: docker run -d -p 8080:80 ${{ env.CONTAINER_REGISTRY }}/$DOCKER_USERNAME/$IMAGE_NAME:latest
