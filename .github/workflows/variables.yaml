@@ -17,7 +17,7 @@ jobs:
 
     - name: Docker Login
       env:
-        DOCKER_PASSWORD: dckr_pat_6wWKrxxW5hxu4-NM-Vaub0p4Q-4
+        DOCKER_PASSWORD: 0101025065Ah@
       run: echo docker login --username=$DOCKER_USERNAME --password=$DOCKER_PASSWORD
 
     - name: Docker Publish
